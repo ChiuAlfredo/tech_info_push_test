@@ -71,54 +71,54 @@ if DELL_DOCK_data.status_code==200:
             Storage_data.append(reset_Storage)
             Display_data.append(reset_Display)                 
                  
-#直到抓到的數量為0
-i=i+1
-while new_number != tatle_number:
-    delay = random.uniform(1.0, 5.0)
-    sleep(delay)
-    url = "https://www.dell.com/en-us/search/desktop?r=36679&p={}&ac=facetselect&t=Product".format(i)
-    i=i+1
-    DELL_DOCK_data = requests.get(url, headers=my_header)
-    sleep(2)
-    if DELL_DOCK_data.status_code==200:
-        L_NB_soup = BeautifulSoup(DELL_DOCK_data.text,"html.parser")
-        sleep(2)
-        all_number = L_NB_soup.select("p.pageinfo > label")    
-        new_number = all_number[0].text.split("-")[-1].strip()
-        #抓取特徵名稱
-        De_dock_data = L_NB_soup.select("article")       
-        data = 0
-        reset_OS,reset_Memory,reset_Storage,reset_Display,reset_Processor,reset_Graphics = "No Data","No Data","No Data","No Data","No Data","No Data"
-        for data in De_dock_data:          
-            D_deta_url = data.select("h3.ps-title > a")
-            De_dock_money = data.select("div.ps-dell-price.ps-simplified")
-            De_dock_title = data.select("span.ps-iconography-specs-title")
-            De_dock_Data = data.select("span.ps-iconography-specs-label")
-            if len(D_deta_url) > 0:
-                #儲存連結
-                ID_data.append(D_deta_url[0].text)
-                Money_data.append(De_dock_money[0].text.split("$")[-1].strip())
-                link_data.append("https:{}".format(D_deta_url[0]["href"]))
-                Data = 0
-                for Data in range(len(De_dock_title)):
-                    if "OS" in De_dock_title[Data].text:
-                        reset_OS = De_dock_Data[Data].text.strip()
-                    elif "Memory" in De_dock_title[Data].text:
-                        reset_Memory = De_dock_Data[Data].text.strip()
-                    elif "Storage" in De_dock_title[Data].text:
-                        reset_Storage = De_dock_Data[Data].text.strip()
-                    elif "Display" in De_dock_title[Data].text:
-                        reset_Display = De_dock_Data[Data].text.strip()                   
-                    elif "Processor" in De_dock_title[Data].text:
-                        reset_Processor = De_dock_Data[Data].text.strip()                    
-                    elif "Graphics" in De_dock_title[Data].text:
-                        reset_Graphic = De_dock_Data[Data].text.strip()
-                Graphics_data.append(reset_Graphic)
-                Processor_data.append(reset_Processor) 
-                Operating_System_data.append(reset_OS)
-                Memory_data.append(reset_Memory)
-                Storage_data.append(reset_Storage)
-                Display_data.append(reset_Display)
+# #直到抓到的數量為0
+# i=i+1
+# while new_number != tatle_number:
+#     delay = random.uniform(1.0, 5.0)
+#     sleep(delay)
+#     url = "https://www.dell.com/en-us/search/desktop?r=36679&p={}&ac=facetselect&t=Product".format(i)
+#     i=i+1
+#     DELL_DOCK_data = requests.get(url, headers=my_header)
+#     sleep(2)
+#     if DELL_DOCK_data.status_code==200:
+#         L_NB_soup = BeautifulSoup(DELL_DOCK_data.text,"html.parser")
+#         sleep(2)
+#         all_number = L_NB_soup.select("p.pageinfo > label")    
+#         new_number = all_number[0].text.split("-")[-1].strip()
+#         #抓取特徵名稱
+#         De_dock_data = L_NB_soup.select("article")       
+#         data = 0
+#         reset_OS,reset_Memory,reset_Storage,reset_Display,reset_Processor,reset_Graphics = "No Data","No Data","No Data","No Data","No Data","No Data"
+#         for data in De_dock_data:          
+#             D_deta_url = data.select("h3.ps-title > a")
+#             De_dock_money = data.select("div.ps-dell-price.ps-simplified")
+#             De_dock_title = data.select("span.ps-iconography-specs-title")
+#             De_dock_Data = data.select("span.ps-iconography-specs-label")
+#             if len(D_deta_url) > 0:
+#                 #儲存連結
+#                 ID_data.append(D_deta_url[0].text)
+#                 Money_data.append(De_dock_money[0].text.split("$")[-1].strip())
+#                 link_data.append("https:{}".format(D_deta_url[0]["href"]))
+#                 Data = 0
+#                 for Data in range(len(De_dock_title)):
+#                     if "OS" in De_dock_title[Data].text:
+#                         reset_OS = De_dock_Data[Data].text.strip()
+#                     elif "Memory" in De_dock_title[Data].text:
+#                         reset_Memory = De_dock_Data[Data].text.strip()
+#                     elif "Storage" in De_dock_title[Data].text:
+#                         reset_Storage = De_dock_Data[Data].text.strip()
+#                     elif "Display" in De_dock_title[Data].text:
+#                         reset_Display = De_dock_Data[Data].text.strip()                   
+#                     elif "Processor" in De_dock_title[Data].text:
+#                         reset_Processor = De_dock_Data[Data].text.strip()                    
+#                     elif "Graphics" in De_dock_title[Data].text:
+#                         reset_Graphic = De_dock_Data[Data].text.strip()
+#                 Graphics_data.append(reset_Graphic)
+#                 Processor_data.append(reset_Processor) 
+#                 Operating_System_data.append(reset_OS)
+#                 Memory_data.append(reset_Memory)
+#                 Storage_data.append(reset_Storage)
+#                 Display_data.append(reset_Display)
 j=0
 #網頁爬取資料
 for j in range(len(link_data)):

@@ -33,25 +33,25 @@ if DELL_DOCK_data.status_code==200:
             #儲存連結
             link.append("https:{}".format(D_deta_url[0]["href"]))
 
-#直到抓到的數量為0
-i=i+1
-while len(De_dock_data) != 0:
-    delay = random.uniform(1.0, 5.0)
-    sleep(delay)
-    url = "https://www.dell.com/en-us/search/docking?p={}&c=8407%2C8408&f=true&ac=categoryfacetselect".format(i)
-    DELL_DOCK_data = requests.get(url, headers=my_header)
-    sleep(2)
-    if DELL_DOCK_data.status_code==200:
-        L_NB_soup = BeautifulSoup(DELL_DOCK_data.text,'html.parser')
-        sleep(2)
-        #抓取特徵名稱
-        De_dock_data = L_NB_soup.select("article")
-        data = 0
-        for data in De_dock_data:          
-            D_deta_url = data.select("h3.ps-title > a")
-            if len(D_deta_url) > 0:
-                #儲存連結
-                link.append("https:{}".format(D_deta_url[0]["href"]))
+# #直到抓到的數量為0
+# i=i+1
+# while len(De_dock_data) != 0:
+#     delay = random.uniform(1.0, 5.0)
+#     sleep(delay)
+#     url = "https://www.dell.com/en-us/search/docking?p={}&c=8407%2C8408&f=true&ac=categoryfacetselect".format(i)
+#     DELL_DOCK_data = requests.get(url, headers=my_header)
+#     sleep(2)
+#     if DELL_DOCK_data.status_code==200:
+#         L_NB_soup = BeautifulSoup(DELL_DOCK_data.text,'html.parser')
+#         sleep(2)
+#         #抓取特徵名稱
+#         De_dock_data = L_NB_soup.select("article")
+#         data = 0
+#         for data in De_dock_data:          
+#             D_deta_url = data.select("h3.ps-title > a")
+#             if len(D_deta_url) > 0:
+#                 #儲存連結
+#                 link.append("https:{}".format(D_deta_url[0]["href"]))
 j=0
 #網頁爬取資料
 for j in range(len(link)):

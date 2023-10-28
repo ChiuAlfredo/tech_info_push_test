@@ -9,7 +9,7 @@ import random
 from util import web_driver
 
 # 定義要爬取的網址    
-url = "https://www.lenovo.com/us/en/search?fq={!ex=prodCat}lengs_Product_facet_ProdCategories:PCs%20Tablets&text=Desktops&rows=60&sort=relevance&display_tab=Products"
+url = "https://www.lenovo.com/us/en/search?fq={!ex=prodCat}lengs_Product_facet_ProdCategories:PCs%20Tablets&text=Desktops&rows=20&sort=relevance&display_tab=Products"
 my_header = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
 #開啟搜尋頁面
 Lenovo_DT = web_driver()
@@ -20,20 +20,20 @@ soup_num = BeautifulSoup(Lenovo_DT.page_source,'html.parser')
 num_t = soup_num.select("p.show > span.page")
 num_n = soup_num.select("p.show > span.total")
 
-#頁面向下滾動 & 資料載入
-while num_n[0].text != num_t[0].text:        
-    #向下滾動
-    Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(2)
-    Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    #按按鈕
-    button = Lenovo_DT.find_elements(By.CSS_SELECTOR,'button.more')            
-    sleep(2)
-    Lenovo_DT.execute_script("arguments[0].click();", button[0])           
-    sleep(2)
-    soup_num = BeautifulSoup(Lenovo_DT.page_source,'html.parser')
-    num_t = soup_num.select("p.show > span.page")
-    Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+# #頁面向下滾動 & 資料載入
+# while num_n[0].text != num_t[0].text:        
+#     #向下滾動
+#     Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#     sleep(2)
+#     Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#     #按按鈕
+#     button = Lenovo_DT.find_elements(By.CSS_SELECTOR,'button.more')            
+#     sleep(2)
+#     Lenovo_DT.execute_script("arguments[0].click();", button[0])           
+#     sleep(2)
+#     soup_num = BeautifulSoup(Lenovo_DT.page_source,'html.parser')
+#     num_t = soup_num.select("p.show > span.page")
+#     Lenovo_DT.execute_script("window.scrollTo(0, document.body.scrollHeight);")
    
 
 #抓連結

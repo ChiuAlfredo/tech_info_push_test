@@ -20,22 +20,22 @@ HP_NB.get(url)
 HP_NB.execute_script("document.body.style.zoom='50%'")
 sleep(2)
 
-#頁面向下滾動 & 資料載入
+# #頁面向下滾動 & 資料載入
 
-while True:
-    try:
-        #向下滾動
-        HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        sleep(2)
-        HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        #按按鈕
-        button = HP_NB.find_elements(By.CSS_SELECTOR,'button.hawksearch-load-more')
-        HP_NB.execute_script("arguments[0].click();", button[0])
-        sleep(2)
-        HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        sleep(3)
-    except:
-        break
+# while True:
+#     try:
+#         #向下滾動
+#         HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         sleep(2)
+#         HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         #按按鈕
+#         button = HP_NB.find_elements(By.CSS_SELECTOR,'button.hawksearch-load-more')
+#         HP_NB.execute_script("arguments[0].click();", button[0])
+#         sleep(2)
+#         HP_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         sleep(3)
+#     except:
+#         break
 
 sleep(5)
 #抓連結

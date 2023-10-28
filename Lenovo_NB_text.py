@@ -13,7 +13,7 @@ Money_link = []
 href_line = []
 
 # 定義要爬取的網址
-url = "https://www.lenovo.com/us/en/search?fq=&text=Laptops&rows=60&sort=relevance&fsid=1"
+url = "https://www.lenovo.com/us/en/search?fq=&text=Laptops&rows=20&sort=relevance&fsid=1"
 my_header = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
 
 #開啟搜尋頁面
@@ -24,21 +24,21 @@ sleep(2)
 soup_num = BeautifulSoup(Lenovo_NB.page_source,'html.parser')
 num_t = soup_num.select("p.show > span.page")
 num_n = soup_num.select("p.show > span.total")
-#頁面向下滾動 & 資料載入
+# #頁面向下滾動 & 資料載入
 
-while num_n[0].text != num_t[0].text:
-    #向下滾動
-    Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(2)
-    Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    #按按鈕
-    button = Lenovo_NB.find_elements(By.CSS_SELECTOR,'button.more')
-    Lenovo_NB.execute_script("arguments[0].click();", button[0])
-    sleep(2)
-    soup_num = BeautifulSoup(Lenovo_NB.page_source,'html.parser')
-    num_t = soup_num.select("p.show > span.page")
-    Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(2)
+# while num_n[0].text != num_t[0].text:
+#     #向下滾動
+#     Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#     sleep(2)
+#     Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#     #按按鈕
+#     button = Lenovo_NB.find_elements(By.CSS_SELECTOR,'button.more')
+#     Lenovo_NB.execute_script("arguments[0].click();", button[0])
+#     sleep(2)
+#     soup_num = BeautifulSoup(Lenovo_NB.page_source,'html.parser')
+#     num_t = soup_num.select("p.show > span.page")
+#     Lenovo_NB.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#     sleep(2)
 
 #抓連結
 sleep(5)

@@ -1,0 +1,30 @@
+chromedriver.exe 請至下列網址下載與電腦匹配的版本
+https://chromedriver.chromium.org/downloads
+
+將 Run_text.bat 檔名改為 Run_text.txt 並開啟此文件檔
+再將檔案位置以絕對位置更改成正確位置
+
+EX:
+放置在D槽內
+python "G:\web crawler text\web_crawler.py" 
+更改為 
+python "D:\web crawler text\web_crawler.py"
+<其中所有絕對位置都需要修改>
+
+關閉文件後再將文件檔名稱改為Run_text.bat
+點擊執行即可進行測試/執行
+
+============================================================================================
+完整爬蟲需將部分備註取消
+
+使用套件
+
+pandas
+selenium
+bs4
+time
+threading
+xlsxwriter
+logging
+requests
+threading

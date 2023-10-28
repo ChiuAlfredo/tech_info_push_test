@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "web crawler 1026 no ip"
+version = "0.1.0"
+description = ""
+authors = ["alfredochiu <tmrmds.alfredo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bs4 = "^0.0.1"
+pandas = "2.0.1"
+selenium = "^4.14.0"
+xlsxwriter = "^3.1.9"
+webdriver-manager = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,53 @@
+[
+    {
+        
+        "httpOnly": false,
+        "name": "optimizely-user-id",
+        "path": "/us-en/shop",
+        "secure": false,
+        "value": "1851-be49-0378-4b13"
+    },
+    {
+        
+        "httpOnly": false,
+        "name": "aka_client_code",
+        "path": "/",
+        "secure": false,
+        "value": "TW-en"
+    },
+    {
+        
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "_abck",
+        "path": "/",
+        "secure": true,
+        "value": "6F877B1338EA50841C001819304A99F4~-1~YAAQHfk90q3sOGGLAQAAGS0NbQrCYLWWcZ/KT4qud1oSlbpmSDdtpOhTNjcnGVbk22DQ3cQJ/viSi8aZGiD4lzXmGC+uPGynNwN4AopLalfLbEiR/7G9XWuC7EL3S3yxwen2hAh2Oq1AdiMFGS4uAnC9/lhbJMrOKZduZtde5rjkv5En70UuQc73WMy1fThI2DCAOdBdmJvj2EKLgg/7m1v5/Z+5j9OpDIngtGFYaiAPoHoDWToFHygL0P1tF650DwSyT3LUrpW+hIv1XVnXUilrjTuIIDwS0jKQ/dBCC10ypo0iMFqZMPMiymUq+ibL/nr/DUEwyBiVyZXw4oF7+N/oQ+dma9XJjSqfJ41pqZ0pAg3JNHXCoMuDhd1OUM8uIQEPyTiD~-1~-1~-1"
+    },
+    {
+        
+        "httpOnly": true,
+        "name": "akavpau_us_vp",
+        "path": "/",
+        "secure": true,
+        "value": "1698341966~id=89d5270b576c82b462f49dbe7d508c54"
+    },
+    {
+        
+        "expiry": 1698348821,
+        "httpOnly": true,
+        "name": "ak_bmsc",
+        "path": "/",
+        "secure": false,
+        "value": "907CE4A1DA99C3D18F747EF73C052B37~000000000000000000000000000000~YAAQHfk90j3mOGGLAQAAuJAMbRVmnmgv4EySohF8gibblvjo0kXSBQxVdX8kd5SGy7aGewOhCGAaOsaGYjP7gT96znqE18rijHBEO+q3BerIA0We5SLv0mYXH2SqjYES08ApMdy9bsLcEyj+mfWLQnsaRdfAl1rhlGCKtlSvtnMxYk2o7RyuqfG3wa7ZKTTcETO154s58y4EQTO6KSli4Xg9E373s4qB6RBqlz//YdrlbZNgzeoMjQB/F9O5nLGNS74pgCwP/VNN4GkbINeBIRxScF/WKMm5kApFqaq1bQIlKP69SaYO8aA8N4rQV6BrogxHeZFO8T9GnKwg8jOghrhby9d/yF5mm68kquJ/W0/Fq7qx/7dvhFfL/5CgObdVBa6NgA8="
+    },
+    {
+        
+        "expiry": 1698356021,
+        "httpOnly": false,
+        "name": "bm_sz",
+        "path": "/",
+        "secure": false,
+        "value": "F676D95F466BF079A81CDAB58C1D5E5E~YAAQHfk90j7mOGGLAQAAuJAMbRWs6djQeOtH11fZoEmyaTHD/giVfiyn95iCtt/0GnR+rzPi5tbqRWzPD19+zay89jNCQNaAUeY5FewGpWWwSXH/BBLs637pdlXlr0mTF+y6mkT8kNMMsMSIsFSBY+iB+5GeIU0nWe4VzjwI/UF5ZWGzNN7+86vsnM1FX8NuDQdnSdiTszinHjJrTE7UExgZTHIXVFPB+B88Et02csqt6PLgIobbyLFnLH7f0z303gop7Slqt82ZjNMPoTiGXfoQL8BtCoKobmjWQm+7Lw==~4534341~3356995"
+    }
+]

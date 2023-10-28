@@ -1,0 +1,886 @@
+[
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933663,
+        "httpOnly": false,
+        "name": "lantern",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "cd9f6a00-dadb-4306-bba7-a6dc1722d111"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "kampyleUserSessionsCount",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732037663,
+        "httpOnly": false,
+        "name": "_ttp",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "AOFogE0G-hN0Ajs8WLcGcHGlioO"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732037663,
+        "httpOnly": false,
+        "name": "_tt_enable_cookie",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "hawk_query_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "c76b6967-bcba-4c73-890a-fc5bdec2ecb0"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "s_cc",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "true"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901662,
+        "httpOnly": false,
+        "name": "AMCV_5E34123F5245B2CD0A490D45%40AdobeOrg",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "-1712354808%7CMCIDTS%7C19657%7CMCMID%7C07182882056949601912194336701063046121%7CMCAAMLH-1698946462%7C11%7CMCAAMB-1698946462%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1698348862s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C4.3.0"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698345262,
+        "httpOnly": false,
+        "name": "_cavisit",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "18b6d0d2f30|"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933662,
+        "httpOnly": false,
+        "name": "_caid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "db6dae03-7ed2-43bc-8438-4bb649bd4bd6"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343468,
+        "httpOnly": false,
+        "name": "_ga_invisit",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "6"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732528360,
+        "httpOnly": false,
+        "name": "_scid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "bd90927c-85c0-40d3-8452-aff55a85d954"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732037662,
+        "httpOnly": false,
+        "name": "_uetvid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "e66f33c0742511ee9864d7b26be82426"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": true,
+        "name": "akavpau_us_vp",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1698341966~id=89d5270b576c82b462f49dbe7d508c54"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698428062,
+        "httpOnly": false,
+        "name": "_uetsid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "e66f06a0742511eebb5ac3d048f4fccb"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877664,
+        "httpOnly": false,
+        "name": "ivid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "8c6965be8c61330aa881330a32623d2732629e8b1d"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901668,
+        "httpOnly": false,
+        "name": "_ga_KBN04WJ49D",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "GS1.1.1698341662.1.0.1698341662.0.0.0"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "IR_5105",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1698341662300%7C365159%7C1698341662300%7C%7C"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698428068,
+        "httpOnly": false,
+        "name": "_gid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "GA1.2.940341278.1698341662"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "IR_gbd",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "hp.com"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1706117662,
+        "httpOnly": false,
+        "name": "_rdt_uuid",
+        "path": "/",
+        "sameSite": "Strict",
+        "secure": true,
+        "value": "1698341662511.66601402-ad2e-498f-a7ed-8cdaa5627edc"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "dcm_s",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1698341662221.1406489821"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "_gcl_au",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1.1.1351496471.1698341662"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877668,
+        "httpOnly": false,
+        "name": "_ga_vnum",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732528361,
+        "httpOnly": false,
+        "name": "_sctr",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1%7C1698336000000"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343462,
+        "httpOnly": false,
+        "name": "s_engc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "T"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901662,
+        "httpOnly": false,
+        "name": "s_ecid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "MCMID%7C07182882056949601912194336701063046121"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343462,
+        "httpOnly": false,
+        "name": "s_invisitc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "2"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "s_vnumid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "6DA3091A"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": true,
+        "name": "WC_GENERIC_ACTIVITYDATA",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "[4586202957%3Atrue%3Afalse%3A0%3AkXupydOpiRmkQXHiuyk6ZiuGPF4ONVz8JPlihiLvdMA%3D][com.ibm.commerce.context.entitlement.EntitlementContext|10003%2610003%26null%26-2000%26null%26null%26null][com.ibm.commerce.context.audit.AuditContext|1698341626378-328076][com.ibm.commerce.context.globalization.GlobalizationContext|-1%26USD%26-1%26USD][com.ibm.commerce.store.facade.server.context.StoreGeoCodeContext|null%26null%26null%26null%26null%26null][com.ibm.commerce.context.experiment.ExperimentContext|null][com.ibm.commerce.context.ExternalCartContext|null][com.ibm.commerce.context.bcsversion.BusinessContextVersionContext|null][com.ibm.commerce.context.task.TaskContext|null%26null][com.ibm.commerce.giftcenter.context.GiftCenterContext|null%26null%26null][com.ibm.commerce.catalog.businesscontext.CatalogContext|10051%267000000000000000601%26false%26false%26true][com.ibm.commerce.context.preview.PreviewContext|null%26null%26false][CTXSETNAME|Store][com.ibm.commerce.context.content.ContentContext|null][com.ibm.commerce.context.base.BaseContext|10151%26-1002%26-1002%26-1]"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343461,
+        "httpOnly": false,
+        "name": "ddj",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "-"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1706117662,
+        "httpOnly": false,
+        "name": "_fbp",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "fb.1.1698341662495.1066011680"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901668,
+        "httpOnly": false,
+        "name": "_ga",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "GA1.2.1447735939.1698341662"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "AMCVS_5E34123F5245B2CD0A490D45%40AdobeOrg",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dycnst",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "dg"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "hpeuck_answ",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698348825,
+        "httpOnly": false,
+        "name": "bm_sv",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "DBF621AC4CF444B87200B87B69AA553F~YAAQHfk90iztOGGLAQAA4z0NbRXDNH9mwEbPh6gNtXyYYbdhXCM1VoArft/efst1NWBeW90eoS6a0QsmkTcvXsOHFszGRcI4XYgIhEb/emwpvSukHmf4vwodaocX20kGEn86m10BDATLF6YS6tvhuWiyXtzO6MlCY2d0O2oCbDW26Nmb68ErVC+uPe2mMW/CwrJywRM/4CzyZx/TmH2iMCzRgtaQwJqGRGMvmfqRDZtvSHvAnAG7Gl63uJY=~1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "kampyleUserSession",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1698341662799"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698341728,
+        "httpOnly": false,
+        "name": "_gat_UA-73104404-1",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343462,
+        "httpOnly": false,
+        "name": "s_invisit",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "hpeuck_prefs",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1111"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "OptanonAlertBoxClosed",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "2023-10-26T17:34:21.788Z"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698348821,
+        "httpOnly": true,
+        "name": "ak_bmsc",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "907CE4A1DA99C3D18F747EF73C052B37~000000000000000000000000000000~YAAQHfk90j3mOGGLAQAAuJAMbRVmnmgv4EySohF8gibblvjo0kXSBQxVdX8kd5SGy7aGewOhCGAaOsaGYjP7gT96znqE18rijHBEO+q3BerIA0We5SLv0mYXH2SqjYES08ApMdy9bsLcEyj+mfWLQnsaRdfAl1rhlGCKtlSvtnMxYk2o7RyuqfG3wa7ZKTTcETO154s58y4EQTO6KSli4Xg9E373s4qB6RBqlz//YdrlbZNgzeoMjQB/F9O5nLGNS74pgCwP/VNN4GkbINeBIRxScF/WKMm5kApFqaq1bQIlKP69SaYO8aA8N4rQV6BrogxHeZFO8T9GnKwg8jOghrhby9d/yF5mm68kquJ/W0/Fq7qx/7dvhFfL/5CgObdVBa6NgA8="
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dyid",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "2661627630582407964"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "_dyid_server",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "2661627630582407964"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dy_toffset",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "0"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dy_geo",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "TW.AS.TW_TPE.TW_TPE_Taipei"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901625,
+        "httpOnly": false,
+        "name": "_pnvl",
+        "path": "/",
+        "sameSite": "Strict",
+        "secure": false,
+        "value": "false"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "_dyjsession",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "b860b9af440f2b395ad543ed28f322d7"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "_dyfs",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1698341660832"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": true,
+        "name": "JSESSIONID",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "0000STD55tBp4vhvANnR6CldPm3:2e8f2dc5"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "mdLogger",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "false"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "CC_FINGERPRINT",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "2985353520"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "kampyle_userid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "4c5b-0196-29c3-f56c-de8d-ee96-f1be-eee9"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729445626,
+        "httpOnly": false,
+        "name": "hawk_visitor_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "248f20a7-beee-4969-93fe-17dd482e70f2"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "_dy_lu_ses",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "b860b9af440f2b395ad543ed28f322d7%3A1698341660832"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "WC_ACTIVEPOINTER",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "-1%2C10151"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dycst",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "dk.m.c.ms."
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "hawk_visit_id",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "8f900c06-948d-404b-8041-735ba678bdfe"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "OptanonConsent",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "isGpcEnabled=0&datestamp=Fri+Oct+27+2023+01%3A34%3A21+GMT%2B0800+(Taipei+Standard+Time)&version=202307.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=a83e7d90-dbbb-40af-9908-cfaa22d0acb5&interactionCount=1&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1%2C4%3A1%2C8%3A1"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "WC_SESSION_ESTABLISHED",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "true"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343462,
+        "httpOnly": false,
+        "name": "_ga4_invisitc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "5"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698356021,
+        "httpOnly": false,
+        "name": "bm_sz",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "F676D95F466BF079A81CDAB58C1D5E5E~YAAQHfk90j7mOGGLAQAAuJAMbRWs6djQeOtH11fZoEmyaTHD/giVfiyn95iCtt/0GnR+rzPi5tbqRWzPD19+zay89jNCQNaAUeY5FewGpWWwSXH/BBLs637pdlXlr0mTF+y6mkT8kNMMsMSIsFSBY+iB+5GeIU0nWe4VzjwI/UF5ZWGzNN7+86vsnM1FX8NuDQdnSdiTszinHjJrTE7UExgZTHIXVFPB+B88Et02csqt6PLgIobbyLFnLH7f0z303gop7Slqt82ZjNMPoTiGXfoQL8BtCoKobmjWQm+7Lw==~4534341~3356995"
+    },
+    {
+        "domain": ".www.hp.com",
+        "expiry": 1698946425,
+        "httpOnly": false,
+        "name": "RT",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "\"z=1&dm=www.hp.com&si=860888be-c72b-4445-8c6f-cf15bb98dc6b&ss=lo7gr23p&sl=1&tt=20e&bcn=%2F%2F684d0d42.akstat.io%2F&ld=2t3\""
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "kampyleSessionPageCounter",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732528360,
+        "httpOnly": false,
+        "name": "_scid_r",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "bd90927c-85c0-40d3-8452-aff55a85d954"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "s_vnum",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343462,
+        "httpOnly": false,
+        "name": "_ga4_invisit",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "_ga4_vnum",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877660,
+        "httpOnly": false,
+        "name": "_dy_soct",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "830000.1628303.1698341660"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1698343468,
+        "httpOnly": false,
+        "name": "_ga_invisitc",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "2"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "aka_client_code",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "TW-en"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "optimizely-user-id",
+        "path": "/us-en/shop",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "1851-be49-0378-4b13"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901668,
+        "httpOnly": false,
+        "name": "_ga_GHQEVRZ8SH",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "GS1.2.1698341662.1.0.1698341662.60.0.0"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901625,
+        "httpOnly": false,
+        "name": "_pnss",
+        "path": "/",
+        "sameSite": "Strict",
+        "secure": false,
+        "value": "blocked"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": true,
+        "name": "WC_AUTHENTICATION_-1002",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "-1002%2C%2F4HDXpF3hNXyjVPxYkAks6SL7SJULRQBAfPON4QntIU%3D"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877662,
+        "httpOnly": false,
+        "name": "_ga4_vnumid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "7C40F552"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901625,
+        "httpOnly": false,
+        "name": "pushly.user_puuid",
+        "path": "/",
+        "sameSite": "Strict",
+        "secure": false,
+        "value": "x1WfwyogYWDVoMpdiiE9mNpbv5ywG7Vd"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "s_prevPage",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "us:en:store:public:search:shared:shared:search"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877626,
+        "httpOnly": true,
+        "name": "WC_PERSISTENT",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "lZU1OT5Z4mE3UTqmZYE0SMy4HnpRxJLIn2TboCAuI1c%3D%3B2023-10-26+17%3A33%3A46.391_1698341626378-328076_10151"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dy_c_exps",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": ""
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": true,
+        "name": "WC_USERACTIVITY_-1002",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "-1002%2C10151%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C1383256606%2Cver_null%2CYSGhynzUT8BkxOtIX9gIUNbBpCR0ZdAgCixYdVODTVIFq7vhwu9xub9bI%2FAQW2bN9HNSgoiUP9wehqD3z76pXQe5%2BGXEbQaLoM67fqx57lz8K2fwsB%2FdPkXWHxxpu5bixRwtJvjvvuh7uHYr9Fqq%2FrwS5IJOXwL4KKPyGhRnClxepmij9Wm71neC1mvv%2FE5N370Dz0fHHPX52SxyGG1oQBTTtQSHcoYit4TFJ3YgcOTczmyu2KhZEmrn2UieObHj"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933622,
+        "httpOnly": false,
+        "name": "_dy_ses_load_seq",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "143%3A1698341622900"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1732901662,
+        "httpOnly": false,
+        "name": "IR_PI",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "e673ba64-7425-11ee-b206-0bc928612d19%7C1698428062300"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1700933660,
+        "httpOnly": false,
+        "name": "_dy_df_geo",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "Taiwan..Taipei"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "_dy_csc_ses",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "t"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "dy_fs_page",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "www.hp.com%2Fus-en%2Fshop%2Fsitesearch%3Fkeyword%3Ddocking"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1713893627,
+        "httpOnly": false,
+        "name": "optimizelyEndUserId",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "oeu1698341627200r0.984969290773412"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "s_fid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "7955A6CE85182343-D3AC136961C0ABFC"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877661,
+        "httpOnly": false,
+        "name": "_abck",
+        "path": "/",
+        "sameSite": "Lax",
+        "secure": true,
+        "value": "6F877B1338EA50841C001819304A99F4~-1~YAAQHfk90q3sOGGLAQAAGS0NbQrCYLWWcZ/KT4qud1oSlbpmSDdtpOhTNjcnGVbk22DQ3cQJ/viSi8aZGiD4lzXmGC+uPGynNwN4AopLalfLbEiR/7G9XWuC7EL3S3yxwen2hAh2Oq1AdiMFGS4uAnC9/lhbJMrOKZduZtde5rjkv5En70UuQc73WMy1fThI2DCAOdBdmJvj2EKLgg/7m1v5/Z+5j9OpDIngtGFYaiAPoHoDWToFHygL0P1tF650DwSyT3LUrpW+hIv1XVnXUilrjTuIIDwS0jKQ/dBCC10ypo0iMFqZMPMiymUq+ibL/nr/DUEwyBiVyZXw4oF7+N/oQ+dma9XJjSqfJ41pqZ0pAg3JNHXCoMuDhd1OUM8uIQEPyTiD~-1~-1~-1"
+    },
+    {
+        "domain": "www.hp.com",
+        "expiry": 1729877668,
+        "httpOnly": false,
+        "name": "_ga_vnumid",
+        "path": "/",
+        "sameSite": "None",
+        "secure": true,
+        "value": "22A393F3"
+    },
+    {
+        "domain": "www.hp.com",
+        "httpOnly": false,
+        "name": "aka_client_code",
+        "path": "/us-en/shop",
+        "sameSite": "Lax",
+        "secure": false,
+        "value": "TW-en"
+    }
+]

@@ -1,6 +1,6 @@
 import time
 import threading
-
+'''
 #設定平行運行
 def subroutine_1():
     import dell_NB
@@ -51,5 +51,24 @@ Subroutine_4.join()   # 加入等待 dd() 完成的方法
 
 #執行最後程序
 Subroutine_5.start()  # 當前面都執行完，才會開始執行
+'''
 
+import dell_NB
+time.sleep(3)
+import Lenovo_DT
+time.sleep(3)
+import dell_DT
+time.sleep(2)
+import HP_NB
+time.sleep(3)
+import Lenovo_docking
+time.sleep(3)
+import dell_dock
+time.sleep(4)
+import HP_DT
+time.sleep(3)
+import Lenovo_NB
+time.sleep(3)
+import HP_docking 
+import reorganize_data
 

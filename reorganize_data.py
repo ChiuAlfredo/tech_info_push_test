@@ -29,23 +29,73 @@ service = Service(ChromeDriverManager().install())
 my_header = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
 
 #將商品名稱與長寬深/重量抓出建立字典<方便後續補齊 減少需抓捕資料>
-Dell_NB_data = {}
+Dell_NB_data_DW = {}
+Dell_NB_data_camera = {}
 DNB = 0
 for DNB in range(len(df["Brand"])):
-    if df["Model Name"][DNB] not in Dell_NB_data and len(str(df["Dimensions and Weight"][DNB])) > 25 :
-        Dell_NB_data[df["Model Name"][DNB]] = str(df["Dimensions and Weight"][DNB])        
+    if df["Model Name"][DNB] not in Dell_NB_data_DW and len(str(df["Dimensions and Weight"][DNB])) > 25 :
+        Dell_NB_data_DW[df["Model Name"][DNB]] = str(df["Dimensions and Weight"][DNB])        
+    if df["Model Name"][DNB] not in Dell_NB_data_camera and len(str(df["Camera"][DNB])) > 10 :
+        Dell_NB_data_camera[df["Model Name"][DNB]] = str(df["Camera"][DNB])  
+
+DNB = 0
+for DNB in range(len(df["Brand"])):
+    if len(str(df["Camera"][DNB])) < 10 and df["Model Name"][DNB] in Dell_NB_data_camera:
+        df["Camera"][DNB] = Dell_NB_data_camera.get(df["Model Name"][DNB])
 
 Height = []
 Width = []
 Depth = []
-Weight = []        
+Weight = []
 
+#Dell_NB 資料檢驗/補充
+DNB = 0
+for DNB in range(len(df["Brand"])):        
+    if len(str(df["Ports & Slots"][DNB])) < 20:
+        print(DNB)
+        delay = random.uniform(0.5, 5.0)
+        sleep(delay)
+        url_dell = df["Web Link"][DNB] + "#techspecs_section"
+        option = webdriver.ChromeOptions()
+        option.add_argument("headless")
+        dell_dock = webdriver.Chrome(options=option)
+        dell_dock.get(url_dell)
+        sleep(2)
+        dell_dock.execute_script("document.body.style.zoom='50%'")
+        sleep(2)
+        dell_dock.execute_script("window.scrollTo(0, document.body.scrollHeight*0.5);")
+        sleep(2)
+        soup = BeautifulSoup(dell_dock.page_source,"html.parser")
+        dell_dock.quit()
+        one_data = soup.select("ul.cf-hero-bts-list > li")
+        Ports_Slots=""
+        for one in one_data:
+            two_data = one.select("p")
+            if "Power Supply" in two_data[0].text:
+                Power_Supply = two_data[0].text.strip()
+            if "Ports" in two_data[0].text or "Slots" in two_data[0].text or "PORTS" in two_data[0].text:
+                two_data = one.select(" p > a")
+                Ports_Slots = two_data[0]["data-description"]
+                Ports_Slots = Ports_Slots.replace("<br>","\n")
+                Ports_Slots = Ports_Slots.replace("<ul>","")
+                Ports_Slots = Ports_Slots.replace("</ul>","")
+                Ports_Slots = Ports_Slots.replace("<li>"," ")
+                Ports_Slots = Ports_Slots.replace("</li>","\n")
+                Ports_Slots = Ports_Slots.replace("<span>"," ")
+                Ports_Slots = Ports_Slots.replace("</span>","")
+        No_select_data = soup.select("li.mb-2")
+        for no_data in No_select_data:
+            No_select_title = no_data.select("div")
+            No_select_Data = no_data.select("p")
+            if "Ports" in No_select_title[0].text or "Slots" in No_select_title[0].text or "PORTS" in No_select_title[0].text:
+                Ports_Slots = Ports_Slots + "\n" + No_select_Data[0].text
+        df["Ports & Slots"][DNB] = Ports_Slots
 #針對DELL重量體積資料處理 & 單位換算 & 資料切割        
 S_W = df["Dimensions and Weight"]
 i = 0
 for i in range(len(S_W)):
-    if str(Dell_NB_data.get(df["Model Name"][i])) != "None":
-        A00 = Dell_NB_data[df["Model Name"][i]].lower()
+    if str(Dell_NB_data_DW.get(df["Model Name"][i])) != "None":
+        A00 = Dell_NB_data_DW[df["Model Name"][i]].lower()
         A0 = A00.split("weight")
         no_weight = 0
         for no_weight in range(len(A0)):
@@ -131,11 +181,70 @@ df_2 = pd.read_excel("Lenovo_NB.xlsx",index_col="Unnamed: 0")
 
 df_1 = df_1.T
 df_2 = df_2.T
+df_1= df_1.reset_index(drop=True)
+df_2= df_2.reset_index(drop=True)
+
+HP_NB_data_camera = {}
+HP_NB_data_OS = {}
+HP_NB_data_Processor = {}
+HP_NB_data_GC = {}
+
+#HP_NB 現有資料剪貼
+DNB = 0
+for DNB in range(len(df_1["Brand"])):
+    if len(str(df_1["Camera"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_camera:
+        df_1["Camera"][DNB] = HP_NB_data_camera.get(df_1["Model Name"][DNB])
+    if len(str(df_1["Operating System"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_OS:
+        df_1["Operating System"][DNB] = HP_NB_data_OS.get(df_1["Model Name"][DNB])        
+    if len(str(df_1["Processor"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_Processor:
+        df_1["Processor"][DNB] = HP_NB_data_Processor.get(df_1["Model Name"][DNB])        
+    if len(str(df_1["Graphics Card"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_GC:
+        df_1["Graphics Card"][DNB] = HP_NB_data_GC.get(df_1["Model Name"][DNB])
+    if len(str(df_1["Audio and Speakers"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_GC:
+        df_1["Audio and Speakers"][DNB] = HP_NB_data_GC.get(df_1["Model Name"][DNB])
+        
+DNB = 0
+for DNB in range(len(df_1["Brand"])):
+    if len(str(df_1["Camera"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_camera:
+        df_1["Camera"][DNB] = HP_NB_data_camera.get(df_1["Model Name"][DNB])
+    if len(str(df_1["Operating System"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_OS:
+        df_1["Operating System"][DNB] = HP_NB_data_OS.get(df_1["Model Name"][DNB])
+    if len(str(df_1["Processor"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_Processor:
+        df_1["Processor"][DNB] = HP_NB_data_Processor.get(df_1["Model Name"][DNB])    
+    if len(str(df_1["Graphics Card"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_GC:
+        df_1["Graphics Card"][DNB] = HP_NB_data_GC.get(df_1["Model Name"][DNB])
+    if len(str(df_1["Audio and Speakers"][DNB])) < 10 and df_1["Model Name"][DNB] in HP_NB_data_GC:
+        df_1["Audio and Speakers"][DNB] = HP_NB_data_GC.get(df_1["Model Name"][DNB])
+
+Lenovo_NB_data_camera = {}
+Lenovo_NB_data_PB = {}
+Lenovo_NB_data_PS = {}
+     
+#Lenovo_NB 現有資料剪貼
+DNB = 0
+for DNB in range(len(df_2["Brand"])):
+    if len(str(df_2["Camera"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_camera:
+        df_2["Camera"][DNB] = Lenovo_NB_data_camera.get(df_2["Model Name"][DNB])
+    if len(str(df_2["Primary Battery"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_PB:
+        df_2["Primary Battery"][DNB] = Lenovo_NB_data_PB.get(df_2["Model Name"][DNB])        
+    if len(str(df_2["Ports & Slots"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_PS:
+        df_2["Ports & Slots"][DNB] = Lenovo_NB_data_PS.get(df_2["Model Name"][DNB])        
+
+DNB = 0
+for DNB in range(len(df_2["Brand"])):
+    if len(str(df_2["Audio and Speakers"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_camera:
+        df_2["Audio and Speakers"][DNB] = Lenovo_NB_data_camera.get(df_2["Model Name"][DNB])
+    if len(str(df_2["Primary Battery"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_PB:
+        df_2["Primary Battery"][DNB] = Lenovo_NB_data_PB.get(df_2["Model Name"][DNB])
+    if len(str(df_2["Ports & Slots"][DNB])) < 10 and df_2["Model Name"][DNB] in Lenovo_NB_data_PS:
+        df_2["Ports & Slots"][DNB] = Lenovo_NB_data_PS.get(df_2["Model Name"][DNB])
+
 df_2= df_2.reset_index(drop=True)
 re_load = 0
 # 檢查Lenovo_NB的缺值(HWD/Weight)並補齊
 for re_load in range(len(df_2)):
     if str(df_2['Depth'][re_load]) == "nan" :
+        print(re_load)
         delay = random.uniform(1.0, 5.0)
         sleep(delay)
         data_url = df_2['Web Link'][re_load] 
@@ -244,7 +353,29 @@ for re_load in range(len(df_2)):
                 else:
                     Wei = ""
                 df_2['Weight'][re_load] = Wei
-   
+                
+#檢查HP_NB 的缺值/補充
+re_load = 0
+df_1= df_1.reset_index(drop=True)
+for re_load in range(len(df_1)):
+    if str(df_1['Official Price'][re_load]) == "Nan":
+        print(re_load)
+        Price = "Nan"
+        data_url = df_1['Web Link'][re_load]
+        option = webdriver.ChromeOptions()
+        HP_DT_data = webdriver.Chrome(options=option)
+        HP_DT_data.get(data_url)
+        sleep(2)
+        L_DT_soup = BeautifulSoup(HP_DT_data.page_source,'html.parser')
+        L_DT_data_n = L_DT_soup.select("div.Typography-module_root__eQwd4.Typography-module_boldL__LZR-5.PriceBlock-module_hasActiveDeal__W4zIr.Typography-module_responsive__iddT7")
+        if len(L_DT_data_n) <1:
+            L_DT_data_n = L_DT_soup.select("div.Typography-module_root__eQwd4.Typography-module_boldL__LZR-5.Typography-module_responsive__iddT7")
+        HP_DT_data.quit()
+        if len(L_DT_data_n) >0:           
+            Price = L_DT_data_n[0].text
+            Price = Price.replace("$","")
+        df_1['Official Price'][re_load] = Price
+        
 df_1["FPR_model"] = "No"
 df_2["FPR_model"] = "No"
 df_1 = df_1.sort_values(["Model Name"],ascending=True)
@@ -321,6 +452,9 @@ Width = []
 Depth = []
 Weight = []
 
+#檢查DELL_DT缺值
+#尚不需
+
 #針對DELL重量體積資料處理 & 單位換算 & 資料切割
 S_W = df1["Dimensions and Weight"]
 for i in range(len(S_W)):
@@ -357,10 +491,8 @@ for i in range(len(S_W)):
                             width_data = float(A1[cm_data].split("width")[-1].split("3. ")[0].split("2. ")[-1].split("(")[-1].split(":")[-1].strip())*10
                         elif "depth" in A1[cm_data] or "length" in A1[cm_data]:
                             depth_data = float(A1[cm_data].split("depth")[-1].split("length")[-1].split("3. ")[-1].split("(")[-1].split(":")[-1].strip())*10
-            if len(A0) >1:
-                
+            if len(A0) >1:               
                 if len(df1["Model Name"][i].split("Special")) > 1:
-                    print("A")
                     if "kg" in A0[-2]:
                         A2 = A0[-2].split("kg")
                         Weight_data = A2[0].split("(")[-1].split(":")[-1].strip()
@@ -405,12 +537,50 @@ df1_1 = pd.read_excel("HP_DT.xlsx",index_col="Unnamed: 0")
 df1_2 = pd.read_excel("Lenovo_DT.xlsx",index_col="Unnamed: 0")
 df1_1 = df1_1.T
 df1_2 = df1_2.T
+df1_1= df1_1.reset_index(drop=True)
+df1_2= df1_2.reset_index(drop=True)
+HP_DT_data_Display = {}
+HP_DT_data_HD = {}
+
+#HP_DT 現有資料剪貼
+DNB = 0
+for DNB in range(len(df1_1["Brand"])):
+    if len(str(df1_1["Display"][DNB])) < 10 and df1_1["Model Name"][DNB] in HP_DT_data_Display:
+        df1_1["Display"][DNB] = HP_DT_data_Display.get(df1_1["Model Name"][DNB])
+    if len(str(df1_1["Hard Drive"][DNB])) < 10 and df1_1["Model Name"][DNB] in HP_DT_data_HD:
+        df1_1["Hard Drive"][DNB] = HP_DT_data_HD.get(df1_1["Model Name"][DNB])             
+
+DNB = 0
+for DNB in range(len(df1_1["Brand"])):
+    if len(str(df1_1["Display"][DNB])) < 10 and df1_1["Model Name"][DNB] in HP_DT_data_Display:
+        df1_1["Display"][DNB] = HP_DT_data_Display.get(df1_1["Model Name"][DNB])
+    if len(str(df1_1["Hard Drive"][DNB])) < 10 and df1_1["Model Name"][DNB] in HP_DT_data_HD:
+        df1_1["Hard Drive"][DNB] = HP_DT_data_HD.get(df1_1["Model Name"][DNB])
+        
+Lenovo_DT_data_PS = {}
+Lenovo_DT_data_Display = {}
+
+#Lenovo_DT 現有資料剪貼
+DNB = 0
+for DNB in range(len(df1_2["Brand"])):
+    if len(str(df1_2["Ports & Slots"][DNB])) < 10 and df1_2["Model Name"][DNB] in Lenovo_DT_data_PS:
+        df1_2["Ports & Slots"][DNB] = Lenovo_DT_data_PS.get(df1_2["Model Name"][DNB])
+    if len(str(df1_2["Display"][DNB])) < 10 and df1_2["Model Name"][DNB] in Lenovo_DT_data_Display:
+        df1_2["Display"][DNB] = Lenovo_DT_data_Display.get(df1_2["Model Name"][DNB])               
+
+DNB = 0
+for DNB in range(len(df1_2["Brand"])):
+    if len(str(df1_2["Ports & Slots"][DNB])) < 10 and df1_2["Model Name"][DNB] in Lenovo_DT_data_PS:
+        df1_2["Ports & Slots"][DNB] = Lenovo_DT_data_PS.get(df1_2["Model Name"][DNB])
+    if len(str(df1_2["Display"][DNB])) < 10 and df1_2["Model Name"][DNB] in Lenovo_DT_data_Display:
+        df1_2["Display"][DNB] = Lenovo_DT_data_Display.get(df1_2["Model Name"][DNB])
 
 # 檢查Lenovo_DT的缺值(HWD/Weight)並補齊
 re_load = 0
-df1_2= df1_2.reset_index(drop=True)
+
 for re_load in range(len(df1_2)):
     if str(df1_2['Depth'][re_load]) == "nan" :
+        print(re_load)
         delay = random.uniform(1.0, 5.0)
         sleep(delay)
         data_url = df1_2['Web Link'][re_load] 
@@ -519,6 +689,90 @@ for re_load in range(len(df1_2)):
                 else:
                     Wei = ""
                 df1_2['Weight'][re_load] = Wei
+
+# 檢查HP_DT
+re_load = 0
+df1_1= df1_1.reset_index(drop=True)
+for re_load in range(len(df1_1)):
+    if str(df1_1['Processor'][re_load]) == "Nan" and str(df1_1['Graphics Card'][re_load]) == "Nan" and str(df1_1['Memory'][re_load]) == "Nan":
+        print(re_load)
+        Processor = "Nan"
+        GC = "Nan"
+        Memory = "Nan"
+        data_url = df1_1['Web Link'][re_load]
+        option = webdriver.ChromeOptions()
+        HP_DT_data = webdriver.Chrome(options=option)
+        HP_DT_data.get(data_url)
+        sleep(2)
+        L_DT_soup = BeautifulSoup(HP_DT_data.page_source,'html.parser')
+        L_DT_data_n = L_DT_soup.select("li.Typography-module_root__eQwd4.Typography-module_bodyS__DBLtm.Typography-module_responsive__iddT7")
+        L_DT_data_n_date = L_DT_data_n[1].text
+        L_DT_data_n_date = L_DT_data_n_date.split("+")
+        df1_1['Processor'][re_load] = L_DT_data_n_date[0]
+        df1_1['Graphics Card'][re_load] = L_DT_data_n_date[1]
+        df1_1['Memory'][re_load] = L_DT_data_n_date[2]
+               
+    if str(df1_1['Official Price'][re_load]) == "Nan":
+        print(re_load)
+        Price = "Nan"
+        data_url = df1_1['Web Link'][re_load]
+        option = webdriver.ChromeOptions()
+        HP_DT_data = webdriver.Chrome(options=option)
+        HP_DT_data.get(data_url)
+        sleep(2)
+        L_DT_soup = BeautifulSoup(HP_DT_data.page_source,'html.parser')
+        L_DT_data_n = L_DT_soup.select("div.Typography-module_root__eQwd4.Typography-module_boldL__LZR-5.PriceBlock-module_hasActiveDeal__W4zIr.Typography-module_responsive__iddT7")
+        if len(L_DT_data_n) <1:
+            L_DT_data_n = L_DT_soup.select("div.Typography-module_root__eQwd4.Typography-module_boldL__LZR-5.Typography-module_responsive__iddT7")
+        HP_DT_data.quit()
+        if len(L_DT_data_n) >0:           
+            Price = L_DT_data_n[0].text
+            Price = Price.replace("$","")
+        df1_1['Official Price'][re_load] = Price
+    if str(df1_1['Height'][re_load]) == "nan" or str(df1_1['Processor'][re_load]) == "Nan" or str(df1_1['Graphics Card'][re_load]) == "Nan":
+        print(re_load)
+        data_url = df1_1['Web Link'][re_load]
+        option = webdriver.ChromeOptions()
+        HP_DT_data = webdriver.Chrome(options=option)
+        HP_DT_data.get(data_url)
+        sleep(2)
+        L_DT_soup = BeautifulSoup(HP_DT_data.page_source,'html.parser')
+        L_DT_data_n = L_DT_soup.select("div.Spec-module_spec__71K6S > div.Spec-module_innerLeft__Z13zG > p")
+        L_DT_data_d_ack = L_DT_soup.select("div.Spec-module_spec__71K6S > div.Spec-module_innerRight__4TTuE")
+        L_DT_specs = L_DT_soup.select("div.Container-module_root__luUPH.Container-module_container__jSUGk > div.Footnotes-module_item__LOUR3 > div")
+        HP_DT_data.quit()
+        specs_data = []
+        W,D,H,Weight_kg = "No_Data","No_Data","No_Data","No_Data"
+        if len(L_DT_specs) > 0:
+            L_DT_specs_list = L_DT_specs[-1].select("span")        
+            if len(L_DT_specs_list) >0:
+                for specs in L_DT_specs_list:
+                    specs_data.append(specs.text)
+        j=0            
+        for j in range(len(L_DT_data_n)):
+            L_DT_data_d = L_DT_data_d_ack[j].select("div.Spec-module_valueWrapper__DTxWC > p.Typography-module_root__eQwd4.Typography-module_bodyM__XNddq.Spec-module_value__9FkNI.Typography-module_responsive__iddT7 > span")
+            #抓取特徵內容
+            N_D = L_DT_data_d[0].text
+            if "[" in N_D and "]" in N_D:
+                N_Dnum = N_D.split("[")[-1].split("]")[0]
+                num = 0
+                for num in range(len(N_Dnum.split(','))):
+                    sp_num = 0
+                    for sp_num in range(len(specs_data)):
+                        if N_Dnum.split(',')[num] in specs_data[sp_num]:
+                            N_D = N_D.replace(N_Dnum.split(',')[num], specs_data[sp_num].split("]")[-1])             
+            if L_DT_data_n[j].text =="Dimensions (W X D X H)":
+                Dim = (N_D).split("x")
+                W = round(float(Dim[0].strip())*25.4,2)
+                D = round(float(Dim[1].strip())*25.4,2)
+                H = round(float(Dim[2].split("in")[0].strip())*25.4,2)
+            elif L_DT_data_n[j].text =="Weight":
+                Weight_kg = round(float(N_D.split("lb")[0].strip())*0.4536,2)            
+        df1_1['Height'][re_load] = H
+        df1_1['Depth'][re_load] = D
+        df1_1['Width'][re_load] = W
+        df1_1['Weight'][re_load] = Weight_kg
+
 df1_1 = df1_1.sort_values(["Model Name"],ascending=True)
 df1_2 = df1_2.sort_values(["Model Name"],ascending=True)
 df1_1 = df1_1.T
@@ -565,6 +819,7 @@ for re_type_DT in range(len(df1["Model Name"])):
             Type.append("Workstation")           
         else:
             Type.append("None Type")
+
 df1 = df1.T
 
 #docking資料重整
@@ -640,4 +895,3 @@ writer.save()
 # except Exception as bug:
 #     # 捕获并记录错误日志
 #     logging.error(f"An error occurred: {str(bug)}", exc_info=True)
-    

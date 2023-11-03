@@ -1,68 +1,59 @@
-Thu 26 Oct 2023 23:49:20 selenium_manager.py WARNING:The chromedriver version (102.0.5005.61) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (118.0.5993.117); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry
-Thu 26 Oct 2023 23:53:38 logger.py INFO:====== WebDriver manager ======
-Thu 26 Oct 2023 23:53:38 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:38 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:38 logger.py INFO:There is no [mac64] chromedriver "118.0.5993.70" for browser google-chrome "118.0.5993" in cache
-Thu 26 Oct 2023 23:53:38 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:39 logger.py INFO:WebDriver version 118.0.5993.70 selected
-Thu 26 Oct 2023 23:53:39 logger.py INFO:Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/mac-arm64/chromedriver-mac-arm64.zip
-Thu 26 Oct 2023 23:53:39 logger.py INFO:About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/mac-arm64/chromedriver-mac-arm64.zip
-Thu 26 Oct 2023 23:53:39 logger.py INFO:Driver downloading response is 200
-Thu 26 Oct 2023 23:53:40 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:40 logger.py INFO:Driver has been saved in cache [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70]
-Thu 26 Oct 2023 23:53:57 logger.py INFO:====== WebDriver manager ======
-Thu 26 Oct 2023 23:53:57 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:58 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:53:58 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Thu 26 Oct 2023 23:57:47 logger.py INFO:====== WebDriver manager ======
-Thu 26 Oct 2023 23:57:47 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:57:47 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:57:47 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Thu 26 Oct 2023 23:59:36 logger.py INFO:====== WebDriver manager ======
-Thu 26 Oct 2023 23:59:36 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:59:36 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Thu 26 Oct 2023 23:59:36 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:03:50 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:03:50 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:03:50 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:03:50 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:03:51 logger.py INFO:WebDriver version 118.0.5993.70 selected
-Fri 27 Oct 2023 00:03:51 logger.py INFO:Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/mac-arm64/chromedriver-mac-arm64.zip
-Fri 27 Oct 2023 00:03:51 logger.py INFO:About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/mac-arm64/chromedriver-mac-arm64.zip
-Fri 27 Oct 2023 00:03:51 logger.py INFO:Driver downloading response is 200
-Fri 27 Oct 2023 00:03:52 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:03:52 logger.py INFO:Driver has been saved in cache [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70]
-Fri 27 Oct 2023 00:12:51 selenium_manager.py WARNING:The chromedriver version (102.0.5005.61) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (118.0.5993.117); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry
-Fri 27 Oct 2023 00:13:24 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:13:24 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:13:24 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:13:24 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:13:28 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:13:28 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:13:28 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:13:28 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:14:30 selenium_manager.py WARNING:The chromedriver version (102.0.5005.61) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (118.0.5993.117); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry
-Fri 27 Oct 2023 00:14:37 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:14:37 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:14:37 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:14:37 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:15:38 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:15:38 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:15:38 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:15:38 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:17:07 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:17:07 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:17:07 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:17:08 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:18:18 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:18:18 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:18:18 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:18:18 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:18:48 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:18:48 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:18:48 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:18:48 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
-Fri 27 Oct 2023 00:19:03 logger.py INFO:====== WebDriver manager ======
-Fri 27 Oct 2023 00:19:03 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:19:03 logger.py INFO:Get LATEST chromedriver version for google-chrome
-Fri 27 Oct 2023 00:19:03 logger.py INFO:Driver [/Users/yidechiu/.wdm/drivers/chromedriver/mac64/118.0.5993.70/chromedriver-mac-arm64/chromedriver] found in cache
+Mon 30 Oct 2023 13:39:41 dell_dt.py ERROR:An error occurred: Message: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: headless chrome=118.0.5993.118)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA2278A2+54818]
+	(No symbol) [0x00007FF6BA196AD2]
+	(No symbol) [0x00007FF6BA04DA3B]
+	(No symbol) [0x00007FF6BA05246D]
+	(No symbol) [0x00007FF6BA0542AA]
+	(No symbol) [0x00007FF6BA0C7C34]
+	(No symbol) [0x00007FF6BA0AEAAA]
+	(No symbol) [0x00007FF6BA0C75A2]
+	(No symbol) [0x00007FF6BA0AE883]
+	(No symbol) [0x00007FF6BA083691]
+	(No symbol) [0x00007FF6BA0848D4]
+	GetHandleVerifier [0x00007FF6BA58B9A2+3610402]
+	GetHandleVerifier [0x00007FF6BA5E1870+3962352]
+	GetHandleVerifier [0x00007FF6BA5D9D5F+3930847]
+	GetHandleVerifier [0x00007FF6BA2C3656+693206]
+	(No symbol) [0x00007FF6BA1A1638]
+	(No symbol) [0x00007FF6BA19D944]
+	(No symbol) [0x00007FF6BA19DA72]
+	(No symbol) [0x00007FF6BA18E123]
+	BaseThreadInitThunk [0x00007FFDB60E257D+29]
+	RtlUserThreadStart [0x00007FFDB6B6AA78+40]
+Traceback (most recent call last):
+  File "c:\users\frank\onedrive\®à­±\1026 ª¦ÂÎ\web crawler 1026\dell_dt.py", line 180, in <module>
+    dell_dock.execute_script("document.body.style.zoom='50%'")
+  File "C:\Users\frank\anaconda3_new\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 406, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\frank\anaconda3_new\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\frank\anaconda3_new\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: headless chrome=118.0.5993.118)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6BA2278A2+54818]
+	(No symbol) [0x00007FF6BA196AD2]
+	(No symbol) [0x00007FF6BA04DA3B]
+	(No symbol) [0x00007FF6BA05246D]
+	(No symbol) [0x00007FF6BA0542AA]
+	(No symbol) [0x00007FF6BA0C7C34]
+	(No symbol) [0x00007FF6BA0AEAAA]
+	(No symbol) [0x00007FF6BA0C75A2]
+	(No symbol) [0x00007FF6BA0AE883]
+	(No symbol) [0x00007FF6BA083691]
+	(No symbol) [0x00007FF6BA0848D4]
+	GetHandleVerifier [0x00007FF6BA58B9A2+3610402]
+	GetHandleVerifier [0x00007FF6BA5E1870+3962352]
+	GetHandleVerifier [0x00007FF6BA5D9D5F+3930847]
+	GetHandleVerifier [0x00007FF6BA2C3656+693206]
+	(No symbol) [0x00007FF6BA1A1638]
+	(No symbol) [0x00007FF6BA19D944]
+	(No symbol) [0x00007FF6BA19DA72]
+	(No symbol) [0x00007FF6BA18E123]
+	BaseThreadInitThunk [0x00007FFDB60E257D+29]
+	RtlUserThreadStart [0x00007FFDB6B6AA78+40]
+
